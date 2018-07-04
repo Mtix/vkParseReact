@@ -10,6 +10,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
 import SendIcon from '@material-ui/icons/Send';
 import {withRouter} from "react-router-dom";
+import UserContainer from '../../containers/User';
 
 const styles = theme => ({
     menuItem: {
@@ -30,6 +31,7 @@ class SideBar extends Component {
 
         return (
             <div className="side-bar">
+                <UserContainer/>
                 <Paper>
                     <MenuList>
                         <MenuItem className={classes.menuItem} onClick={() => {this.props.history.push('/')}}>
